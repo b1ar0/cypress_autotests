@@ -1,0 +1,7 @@
+{
+    "sing_in":"h1.text-xs-center",
+    "login_input":"[name=\"email\"]",
+    "password_input":"[name=\"password\"]",
+    "log_in":".btn",
+    "error_m":".error-messages > li"
+}
