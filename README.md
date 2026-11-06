@@ -14,14 +14,14 @@
 | Верный логин, неверный пароль | существующий | неправильный | ошибка `Wrong email/password combination` |
 | Неверный логин, верный пароль | несуществующий | правильный | ошибка `Email not found sign in first` |
 
-Все три теста лежат в `Cypress/e2e/firsttests.cy.js`. Перед каждым тестом Cypress заново открывает `/#/login`, поэтому тесты не зависят друг от друга.
+Все три теста лежат в `cypress/e2e/firsttests.cy.js`. Перед каждым тестом Cypress заново открывает `/#/login`, поэтому тесты не зависят друг от друга.
 
 ## Как устроен проект
 
 Селекторы и тестовые данные вынесены из тестов в отдельные JSON-файлы. Если на сайте поменяется вёрстка, правка нужна в одном месте, а не в каждом тесте.
 
 ```
-Cypress/
+cypress/
 ├── e2e/
 │   ├── firsttests.cy.js     # тесты авторизации
 │   └── myfirstspec.cy.js    # стартовый пример Cypress
@@ -52,7 +52,7 @@ npx cypress open
 Прогнать тесты авторизации без окна, результат появится в терминале:
 
 ```bash
-npx cypress run --spec "Cypress/e2e/firsttests.cy.js"
+npx cypress run --spec "cypress/e2e/firsttests.cy.js"
 ```
 
 ## Стек
